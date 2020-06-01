@@ -14,5 +14,5 @@ docker run --name ObjectClassification -p 5000:5000 -d flask-app:0.1
 ## Check the deployed model
 
 ```
-curl
+curl -X POST -F "file=@./images/ILSVRC2012_val_00046171.JPEG" http://localhost:5000/predict
 ```
