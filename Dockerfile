@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . /app
 ENV NO_CUDA=1
+
 RUN pip install torchvision flask gunicorn
-EXPOSE 80
 
 CMD exec gunicorn --bind 0.0.0.0:5000 deploy:app
